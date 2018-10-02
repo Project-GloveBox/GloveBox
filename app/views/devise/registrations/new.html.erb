@@ -1,0 +1,36 @@
+<h2>Sign up</h2>
+<ons-page>
+  <ons-toolbar>
+    <div class="center">GloveBox</div>
+  </ons-toolbar>
+  <h2 style="text-align: center; margin-top: 30px; font-family: 'Raleway', sans-serif;">Welcome to GloveBox</h2>
+  <div style="text-align: center; margin-top: 80px;">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'text-input text-input--underbar', placeholder: 'Email',style:"text-align: center; font-size: 1.5rem; margin-bottom: 15px;" %>
+      </div>
+
+      <div class="field">
+        
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: 'text-input text-input--underbar', placeholder: 'Password',style:"text-align: center; margin-bottom: 10px;font-size: 1.5rem;" %>
+      </div>
+
+      <div class="field">
+        
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confimation', class: 'text-input text-input--underbar' ,style:"text-align: center; margin-bottom: 10px;font-size: 1.5rem;" %>
+      </div>
+
+      <div class="actions" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+        <%= f.submit "Sign up", class: "button" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</ons-page>

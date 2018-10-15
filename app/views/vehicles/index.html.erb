@@ -55,11 +55,9 @@ function closeNav() {
 
   <ons-toolbar style="width: 100%; background-color: #3A405A;">
     <div class="toolbar__left" style="width: 33%;" >
-      <ons-toolbar-button><%= link_to 'Home', vehicles_path, class:"button--quiet", style:"color: white;" %></ons-toolbar-button>
+      <ons-toolbar-button><%= link_to 'GloveBox', vehicles_path, class:"button--quiet", style:"color: white; font-weight: bold;" %></ons-toolbar-button>
     </div>
-    <div class="toolbar__center" style="width: 33%; color: white;">
-        <%= "GloveBox" %>
-    </div>
+    
     <div class="toolbar__right" style="width: 33%;" >
       <p onclick="openNav()" class="button--quiet" style="color: white;">Menu</p>
       
@@ -85,7 +83,7 @@ function closeNav() {
   
     <ons-card class=" card card--material" style="max-width: 100% ">
     <%= link_to vehicle_path(vehicle) do %>
-    <%= image_tag(asset_path("vehicle_default2.jpeg"),  width:"100%", id:"vehicle-img")%>
+    <%= image_tag("https://s3.amazonaws.com/gloveboxassets/vehicle_default2.jpeg"),  width:"100%", id:"vehicle-img")%>
     <%end%>
     <div class="title">
       <%= link_to vehicle.name.capitalize, vehicle_path(vehicle),  class:"button--quiet" %>

@@ -16,7 +16,7 @@
             onclick="ons.notification.toast('The VIN (vehicle identification number) can often be found on the lower-left corner of the dashboard, in front of the steering wheel. You can read the number by looking through the windshield.', { timeout: 3000})">
             </i><%= @vehicle.vin %><%= f.text_field :vin, autocomplete: "vin", class: 'text-input', placeholder: '  VIN#' %></ons-list-item>
       <ons-list-item modifier="longdivider"><%= f.text_field :license_plate, autocomplete: "license_plate", class: 'text-input', placeholder: 'License Plate #' %></ons-list-item>
-      <ons-list-item modifier="longdivider"><%= f.text_field :inspection, autocomplete: "inspection_date", class: 'text-input', placeholder: 'Date of last Inspection' %></ons-list-item>
+      <ons-list-item modifier="longdivider" style="color:grey;">Date of Inspection: <%= f.date_field :inspection_date, autocomplete: "inspection_date", class: 'text-input', placeholder: 'Date of last Inspection' %></ons-list-item>
     </ons-list>
     
     <div class="actions" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">

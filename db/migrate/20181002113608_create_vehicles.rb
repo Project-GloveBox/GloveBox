@@ -11,7 +11,7 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.string :tire_psi
       t.string :registration
       t.string :title
-      t.string :inspection
+      t.date :inspection_date
 
       t.timestamps
     end
